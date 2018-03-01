@@ -1,0 +1,71 @@
+
+    <form name="hotelForm" class="form-horizontal">
+        <div class="panel panel-primary">
+            <div class="panel-heading hoteldetailhead">
+                {{vm.title}}
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>Hello</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <div class="form-group"
+         ng-class="{'has-error':hotelForm.inputhCode.$invalid}">
+
+        <label for="inputhCode" class="col-md-2 control-label">Hotel Code</label>
+        <div class="col-md-2">
+            <input id="inputhCode" name="inputhCode"
+                   type="text"
+                   ng-model="vm.hotelList.hcode" class="form-control"
+                   ui-mask="A-9999 (required)" required/>
+        </div>
+    </div>
+
+        <div class="form-group" ng-class="{'has-error':hotelForm.inputHotelName.$invalid}" >
+            <label for="inputHotelName" class="col-md-2 control-label">Hotel Name </label>
+            <div class="col-md-4">
+                <input id="inputHotelName" name="inputHotelName"
+                       type="text" placeholder="Hotel Name (required)"
+                       ng-model="vm.hotelList.hotelname" class="form-control" required/>
+            </div>
+        </div>
+
+        <div class="form-group" ng-class="{'has-error':hotelForm.inputHotelAddress.$invalid}" >
+            <label for="inputHotelAddress" class="col-md-2 control-label">Hotel Address </label>
+            <div class="col-md-4">
+                <input id="inputHotelAddress" name="inputHotelAddress"
+                       type="text" placeholder="Hotel Address (required)"
+                       ng-model="vm.hotelList.address" class="form-control" required/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-4 col-md-offset-2">
+                <span>
+                    <button class="btn btn-primary"
+                            style="width:80px;margin-right: 10px"
+                            ng-click="vm.submit()">Save
+                    </button>
+                </span>
+                <span>
+                    <button class="btn btn-default"
+                            style="width:70px"
+                            ng-click="vm.cancel()">Cancel
+                    </button>
+                </span>
+
+            </div>
+        </div>
+    </form>
+    <div class="panel-footer">
+        <a class="btn btn-default"
+           ui-sref="hotelList"
+           style="width:80px">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            Back
+        </a>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="panel">
+        <div class="panel-heading hoteldetailhead">{{vm.title}}</div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-2">Code:</div>
+                        <div class="col-md-6">{{vm.hotelList.hcode}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">Name:</div>
+                        <div class="col-md-6">{{vm.hotelList.hotelname}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">Address:</div>
+                        <div class="col-md-6">{{vm.hotelList.address}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">Amenities</div>
+                        <div class="col-md-6">{{vm.hotelList.amenities}}</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-2">Rate</div>
+                        <div class="col-md-6">{{vm.hotelList.rate}}</div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-6">
+                    <img class="center-block img-responsive"
+                         ng-src="{{vm.hotelList.imageUrl}}"
+                         title="{{vm.hotelList.hotelname}}">
+                </div>
+            </div>
+        </div>
+        <div class="panel-footer">
+            <a class="btn btn-default"
+               ui-sref="hotelList"
+               style="width:80px">
+                <i class="glyphicon glyphicon-chevron-left"></i>
+                Back
+            </a>
+            <a class="btn btn-primary"
+               ui-sref="hotelEdit({hotelId:vm.hotelList.hotelId})"
+               style="width: 80px;margin-left: 10px">
+                Edit
+            </a>
+        </div>
+
+    </div>
+
+
+</div>

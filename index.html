@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="hotelManagement">
+<head>
+    <meta charset="UTF-8">
+    <title>Choice Hotel Management</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="css/mycss.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- Library Scripts -->
+    <script src="lib/jquery-2.1.3.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-resource.min.js"></script>
+    <script src="lib/angular-mocks.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="lib/bootstrap.js"></script>
+    <!--Application Scripts -->
+    <script src="app/app.js"></script>
+
+    <!-- Services -->
+    <script src="common/services/common.services.js"></script>
+    <script src="common/services/hotelResources.js"></script>
+    <script src="common/services/hotelResourceMock.js"></script>
+
+    <!-- Employee controller -->
+    <script src="app/hotelList/hotelList.js"></script>
+
+
+</head>
+<body>
+<nav class="nav navbar-nav navbar-custom navbar-fixed-top">
+
+    <div class="container">
+        <!--Logo -->
+        <div class="navbar-header">
+            <a href="#" class="navbar-brand"></a>
+            <img src="images/logo2.jpg">
+        </div>
+        <!--Menu Items Left -->
+        <div id="mainNav">
+         <!--   <ul class="navbar navbar-toggleable-md navbar-light bg-faded">  -->
+            <ul class="nav navbar-nav">
+                <li class="active"><a ui-sref="main">Home <span class="glyphicon glyphicon-home"></span></a></li>
+                <li><a ui-sref="hotelList">Hotel List <span class="glyphicon glyphicon-globe"></span></a></li>
+                <li><a href="#"># <span class="glyphicon glyphicon-pawn"></span></a></li>
+                <li><a href="#">About Us</a></li>
+
+                </li>
+            </ul>
+            <!-- Menu Items Right -->
+            <ul class="nav navbar-nav pull-right">
+                <li><a href="#"></a></li>
+                <li><a href="#">My Account <span class="glyphicon glyphicon-user" aria-hidden="true"></span></a></li>
+                <li><span class="badge"><a href="#">13</a></span></li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+</nav>
+<br><br><br><br><br>
+<div ui-view>
+
+</div>
+
+</body>
+</html>

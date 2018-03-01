@@ -1,0 +1,59 @@
+#logo{
+    height: 5%;
+    width: 5%;
+}
+.mythead{
+    font-family: "Times New Roman";
+    font-size: 25px;
+    background-color: #ac2925;
+    color: white;
+    text-align: center;
+}
+nav{
+    font-family: "Times New Roman";
+    font-size: x-large;
+    background-color: #ac2925;
+}
+
+#search{
+    width: 30%;
+    text-align: center;
+}
+.myleft{
+    border-right: solid;
+    border-color: #204d74;
+
+}
+#header{
+    font-family: "Comic Sans MS";
+    font-size: large;
+    background-color: #204d74;
+}
+.content{
+    font-size: 20px;
+
+}
+.row{
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+.rate{
+    font-size: 200%;
+}
+#wallpaper{
+    width: 100%;
+}
+#more{
+    color: #204d74;
+}
+#price{
+    color: #204d74;
+}
+#red{
+    color: #ac2925;
+}
+.hoteldetailhead{
+    background-color:#245269;
+    color: white;
+    font-size: large;
+}

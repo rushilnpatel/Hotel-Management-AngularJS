@@ -1,0 +1,52 @@
+<div class="col-md-12 page-header">
+    <input type="search" ng-model="search" placeholder="Search" class="breadcrumb pull-right" id="search">
+</div>
+<div class="container-fluid">
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-4 mythead">
+                Image
+            </div>
+
+            <div class="col-md-6 mythead">
+                Details
+            </div>
+
+            <div class="col-md-2 mythead">
+                Rate
+            </div>
+
+        </div>
+        <br>
+        <div class="row content breadcrumb" ng-repeat="item in vm.hotelList | filter: search">
+            <div class="col-md-4">
+                <img src="{{item.imageUrl}}">
+            </div>
+
+            <div class="col-md-6">
+
+                <h3 id="red">{{item.hotelname}}</h3>
+                <span class="glyphicon glyphicon-map-marker"></span> <h4>{{item.address}} , {{item.zipcode}} {{item.state}}</h4>
+
+                <h4 id="red">Review : {{item.review}}</h4>
+                <a ui-sref="hotelDetail({hotelId: item.hotelId})" id="more">More Details</a>
+                <br><br>
+                <button type="button" class="btn btn-primary btn-lg">
+                    <a ui-sref="hotelEdit({hotelId: item.hotelId})">Edit<span class="glyphicon glyphicon-send"></span></a>
+                </button>
+
+            </div>
+            <br>
+            <div class="col-md-2 rate">
+                <h2>From</h2>
+                <h1 id="price">{{item.rate | currency}}</h1>
+                <h4>Per Night</h4>
+                <button class="btn-danger btn-lg">Book Now</button>
+            </div>
+
+            <br>
+        </div>
+    </div>
+</div>
